@@ -5,6 +5,7 @@ import { MobileNavbar } from "./components/MobileNavbar";
 import { Home } from "./components/sections/Home";
 import { Projects } from "./components/sections/Projects";
 import { About } from "./components/sections/About";
+import { Contact } from "./components/sections/Contact";
 import "./App.css";
 import "./index.css";
 
@@ -25,6 +26,7 @@ function App() {
         <Home />
         <Projects />
         <About />
+        <Contact />
       </div>
     </>
   );
