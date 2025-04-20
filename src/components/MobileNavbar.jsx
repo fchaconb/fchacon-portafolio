@@ -59,7 +59,7 @@ export const MobileNavbar = ({ menuOpen, setMenuOpen }) => {
           }
         `}
       >
-        {language === "en" ? "About" : "Acerca De"}
+        {language === "en" ? "About Me" : "Sobre Mí"}
       </a>
       <a
         href="#contact"

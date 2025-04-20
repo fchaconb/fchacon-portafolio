@@ -69,7 +69,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
                   className="flex items-center gap-x-1 text-[#372F30] hover:text-[#15616D] transition-colors"
                   onClick={() => setIsAboutOpen((prev) => !prev)}
                 >
-                  {language === "en" ? "About" : "Acerca De"}
+                  {language === "en" ? "About Me" : "Sobre Mí"}
                   {isAboutOpen ? (
                     <ChevronUpIcon className="w-5 h-5 text-[#372F30]" />
                   ) : (
