@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { LoadingScreen } from "./components/LoadingScreen";
+import { LanguageProvider } from "./components/LanguageContext";
 import { Navbar } from "./components/Navbar";
 import { MobileNavbar } from "./components/MobileNavbar";
 import { Home } from "./components/sections/Home";
@@ -14,7 +15,7 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <>
+    <LanguageProvider>
       {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}
       <div
         className={`min-h-screen transition-opacity duration-700 ${
@@ -28,7 +29,7 @@ function App() {
         <About />
         <Contact />
       </div>
-    </>
+    </LanguageProvider>
   );
 }
 

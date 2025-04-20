@@ -1,6 +1,13 @@
 import { useEffect } from "react";
+import { useLanguage } from "../components/LanguageContext";
 
 export const MobileNavbar = ({ menuOpen, setMenuOpen }) => {
+  const { language, setLanguage } = useLanguage();
+
+  const toggleLanguage = () => {
+    setLanguage((prev) => (prev === "en" ? "es" : "en"));
+  };
+
   return (
     <div
       className={`fixed top left-0 w-full bg-[#f6f6f4] z-40 flex flex-col items-center justify-center
@@ -30,7 +37,7 @@ export const MobileNavbar = ({ menuOpen, setMenuOpen }) => {
                     }
           `}
       >
-        Home
+        {language === "en" ? "Home" : "Inicio"}
       </a>
       <a
         href="#projects"
@@ -41,7 +48,7 @@ export const MobileNavbar = ({ menuOpen, setMenuOpen }) => {
           }
         `}
       >
-        Projects
+        {language === "en" ? "Projects" : "Proyectos"}
       </a>
       <a
         href="#about"
@@ -52,7 +59,7 @@ export const MobileNavbar = ({ menuOpen, setMenuOpen }) => {
           }
         `}
       >
-        About
+        {language === "en" ? "About" : "Acerca De"}
       </a>
       <a
         href="#contact"
@@ -63,8 +70,21 @@ export const MobileNavbar = ({ menuOpen, setMenuOpen }) => {
           }
         `}
       >
-        Contact
+        {language === "en" ? "Contact" : "Contacto"}
       </a>
+      <button
+        onClick={() => {
+          setMenuOpen(false);
+          toggleLanguage();
+        }}
+        className={`text-2xl font-semibold text-[#372F30] hover:text-[#15616D] my-4 transform transition-transform duration-300
+          ${
+            menuOpen ? "opacity-100 translate-y-0" : "opacity-100 translate-y-5"
+          }
+        `}
+      >
+        {language === "en" ? "ES" : "EN"}
+      </button>
     </div>
   );
 };
