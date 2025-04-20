@@ -3,6 +3,7 @@ import { LoadingScreen } from "./components/LoadingScreen";
 import { Navbar } from "./components/Navbar";
 import { MobileNavbar } from "./components/MobileNavbar";
 import { Home } from "./components/sections/Home";
+import { Projects } from "./components/sections/Projects";
 import { About } from "./components/sections/About";
 import "./App.css";
 import "./index.css";
@@ -22,6 +23,7 @@ function App() {
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <MobileNavbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <Home />
+        <Projects />
         <About />
       </div>
     </>
