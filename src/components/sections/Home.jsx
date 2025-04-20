@@ -22,6 +22,13 @@ export const Home = () => {
             View Projects
           </a>
           <a
+            href="#about"
+            className="bg-[#15616D] text-white py-3 px-6 rounded font-medium transition relative overflow-hidden 
+            hover:-translate-y-0.5 hover:shadow-[0_0_15px_#6991ac]"
+          >
+            About Me
+          </a>
+          <a
             href="#contact"
             className="bg-[#15616D] text-white py-3 px-6 rounded font-medium transition relative overflow-hidden 
             hover:-translate-y-0.5 hover:shadow-[0_0_15px_#6991ac]"
